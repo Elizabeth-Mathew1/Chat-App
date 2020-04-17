@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="view port" content="width=device-width,initial - scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Chat App</title>
+<script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+<script defer src="script.js"></script>
+
+<style>
+h1{color:rgb(255, 60, 0);
+padding: 45px;
+margin:30px
+}
+</style>
+<h1><b>JUSTALKZ</b></h1>
+</head>
+
+<style>
+body
+{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
+    overflow: auto;
+    background-image: url("https://sites.psu.edu/siowfa16/files/2016/11/stock-vector-business-doodles-145898270-2mjio3i.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+
+}
+#message-container{
+    max-width: 1800px;
+    padding-top: 10%;
+    width: 90%;
+    height:90%;
+
+
+}
+#message-container div{
+    background-color:goldenrod;
+    padding: 5px;
+    
+}
+#message-container div:nth-child(2n)
+{
+    background-color: white;
+}
+#send-container
+{
+    position: fixed;
+    padding-bottom: 50px;
+    bottom: 0;
+    max-width: 2000px;
+    width: 90%;
+    height: 10%;
+    display: flex;
+}
+#message-input{
+
+    flex-grow: 1;
+    background-color:goldenrod;
+}
+
+
+</style>
+<body>
+<div id="message-container"></div>
+<form id="send-container">
+<input type="text" id="message-input">
+<button type="submit" id="send-button">SEND</button> 
+</form>
+</body>
+</html>
